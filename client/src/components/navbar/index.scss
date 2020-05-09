@@ -1,0 +1,112 @@
+$navHeight: 65px;
+$navPadding: 15px;
+$menuWidth: 400px;
+
+#header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: $navHeight;
+  background-color: var(--bg-nav);
+  z-index: 1;
+
+  .profile{
+    height: $navHeight;
+    width: $navHeight;
+    box-sizing: border-box;
+    padding: $navPadding;
+    opacity: 0.5;
+
+    img{
+      border-width: 0;
+      border-radius: $navHeight;
+      height: calc(#{$navHeight} - #{$navPadding} * 2);
+      width: calc(#{$navHeight} - #{$navPadding} * 2);
+    }
+  }
+
+  .profile:hover{
+    opacity: 0.8;
+  }
+
+  .search{
+    flex: 1;
+    box-sizing: border-box;
+    padding: $navPadding;
+    height: $navHeight;
+
+    input{
+      box-sizing: border-box;
+      border-width: 0;
+      height: calc(#{$navHeight} - #{$navPadding} * 2);
+      opacity: 0.8;
+      color: var(--txt-nav);
+      background-color: rgba(0, 0, 0, 0);
+      width: 100%;
+    }
+  }
+
+  .menu-icon{
+    box-sizing: border-box;
+    height: $navHeight;
+    width: $navHeight;
+    padding: $navPadding;
+    opacity: 0.5;
+
+    svg{
+      height: calc(#{$navHeight} - #{$navPadding} * 2);
+      width: calc(#{$navHeight} - #{$navPadding} * 2);
+      stroke: var(--txt-nav);
+    }
+  }
+
+  .menu-icon:hover{
+    opacity: 0.8;
+  }
+
+  .theme-change{
+    height: $navHeight;
+    width: $navHeight;
+    position: relative;
+
+    div{
+      height: $navHeight;
+      width: $navHeight;
+      padding: $navPadding;
+      position: absolute;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      display: none;
+
+      svg{
+        height: calc(#{$navHeight} - #{$navPadding} * 2);
+        width: calc(#{$navHeight} - #{$navPadding} * 2);
+        stroke: var(--txt-nav);
+      }
+    }
+
+    div:hover{
+      opacity: 0.9;
+    }
+    
+    .active{
+        display: block !important;
+    }
+  }
+  
+  .menu{
+    width: $menuWidth;
+    height: 600px;
+    position: absolute;
+    right: calc(-#{$menuWidth});
+    top: $navHeight;
+    border-bottom-left-radius: 20px;
+    background: var(--bg-nav);
+    transition: all 0.5s ease;
+  }
+  
+  .menu.active{
+    right: 0;
+  }
+}

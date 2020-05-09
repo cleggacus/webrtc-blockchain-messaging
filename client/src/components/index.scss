@@ -1,0 +1,14 @@
+#app{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  
+  #content{
+    flex: 1;
+    width: 100%;
+    background-color: var(--bg);
+  }
+}

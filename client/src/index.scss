@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap');
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input{
+  font-size: 15pt;
+}
+
+*{
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  color: var(--txt);
+  transition:
+    background-color 0.5s ease,
+    opacity 0.5s ease;
+}
